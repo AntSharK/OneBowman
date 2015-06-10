@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MyFirstGame.Collider;
 
 namespace MyFirstGame.Sprites
 {
@@ -13,9 +14,10 @@ namespace MyFirstGame.Sprites
     public class TestSprite : BaseSprite
     {
         public TestSprite(GameRunner game):
-            base(game.Content.Load<Texture2D>("Images\\blackball.png"), 
+            base(game.Content.Load<Texture2D>("Images\\bigball.png"), 
             new Vector2(game.GraphicsDevice.Viewport.TitleSafeArea.X, game.GraphicsDevice.Viewport.TitleSafeArea.Y + game.GraphicsDevice.Viewport.TitleSafeArea.Height / 2))
         {
+            this.collider.addSphere(new CollisionSphere(22, this));
         }
 
         /// <summary>
@@ -29,6 +31,13 @@ namespace MyFirstGame.Sprites
             if (InputState.IsKeyDown(Keys.Z))
             {
                 this.isVisible = !this.isVisible;
+            }
+
+            if (InputState.IsKeyDown(Keys.X))
+            {
+                this.rotation = this.rotation + CurrentGame.GetDelta(gameTime);
+                Vector2 offset = new Vector2(100 * (float)Math.Cos(rotation), 100 * (float)Math.Sin(rotation));
+                this.position = new Vector2(200, 200) + offset;
             }
         }
     }

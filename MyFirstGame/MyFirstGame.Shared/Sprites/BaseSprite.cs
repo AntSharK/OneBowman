@@ -4,11 +4,17 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MyFirstGame.Screens;
+using MyFirstGame.Collider;
 
 namespace MyFirstGame.Sprites
 {
     public class BaseSprite
     {
+        /// <summary>
+        /// A collider
+        /// </summary>
+        public SphereCollider collider;
+
         /// <summary>
         /// Texture that this sprite displays
         /// </summary>
@@ -87,6 +93,7 @@ namespace MyFirstGame.Sprites
             this.scale = new Vector2(1, 1);
             this.depth = 0;
             this.screen = screen;
+            this.collider = new SphereCollider(this);
         }
 
         /// <summary>

@@ -9,6 +9,8 @@
     <Import_RootNamespace>MyFirstGame</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Collider\CollisionSphere.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collider\SphereCollider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\CurrentGame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Game.Draw.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Game.Initialize.cs" />
@@ -18,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Screens\ScreenDecorators\BaseScreenDecorator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\ScreenDecorators\TestCameraDecorator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\Testing\TestScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Arrow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\BaseAnimatedSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\BaseSprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprites\MultiLayerSprite.cs" />

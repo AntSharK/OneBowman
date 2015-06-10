@@ -21,6 +21,7 @@ namespace MyFirstGame.Screens
             public const string Ground = "ground";
             public const string Tower = "tower";
             public const string Archer = "archer";
+            public const string Arrow = "arrow";
         }
 
         /// <summary>
@@ -33,9 +34,7 @@ namespace MyFirstGame.Screens
                 CurrentGame.game.Content.Load<Texture2D>("Images\\towerback.png"),
                 new Vector2(50, 250)), Elements.Tower);
 
-            this.AddSprite(new BaseSprite(
-                CurrentGame.game.Content.Load<Texture2D>("Images\\bigball.png"),
-                new Vector2(125, 255)), Elements.Archer);
+            this.AddSprite(new TestSprite(CurrentGame.game), Elements.Archer);
 
             this.AddSprite(new BaseSprite(
                 CurrentGame.game.Content.Load<Texture2D>("Images\\groundlevel.png"), 
@@ -44,6 +43,9 @@ namespace MyFirstGame.Screens
             this.AddSprite(new BaseSprite(
                 CurrentGame.game.Content.Load<Texture2D>("Images\\towerfront.png"),
                 new Vector2(50, 250)), Elements.Tower);
+
+            this.AddSprite(new Arrow(CurrentGame.game), Elements.Arrow);
+            ((Arrow)this.reservedSprite[Elements.Arrow]).somesprite = this.reservedSprite[Elements.Archer];
 
 			this.camera = new Camera (800, 600) {
 				Position = new Vector2 (400, 300)
