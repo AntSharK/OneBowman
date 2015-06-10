@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A20796A1-0E89-455A-9C4D-3571E566BB47}</ProjectGuid>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>MacGame</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG MONOMAC;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\packages\MonoGame.Binaries.3.2.0\build\MonoMac\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+  </ItemGroup>
+  <Import Project="..\MyFirstGame.Shared\Shared.Application.Shared.projitems" Label="Shared" Condition="Exists('..\MyFirstGame.Shared\Shared.Application.Shared.projitems')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainMenu.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\BAMF.png">
+      <Link>Content\Images\BAMF.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\BlueLaser.png">
+      <Link>Content\Images\BlueLaser.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\BlueLaserDeath.png">
+      <Link>Content\Images\BlueLaserDeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\BlueLaserDeathsmall.png">
+      <Link>Content\Images\BlueLaserDeathsmall.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\BlueLasersmall.png">
+      <Link>Content\Images\BlueLasersmall.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\HPDeath.png">
+      <Link>Content\Images\HPDeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\HPTaken.png">
+      <Link>Content\Images\HPTaken.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Health.png">
+      <Link>Content\Images\Health.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Lazer.png">
+      <Link>Content\Images\Lazer.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Lazerdeath.png">
+      <Link>Content\Images\Lazerdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\MenuLevel0.png">
+      <Link>Content\Images\MenuLevel0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\TLC.png">
+      <Link>Content\Images\TLC.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Weapon.png">
+      <Link>Content\Images\Weapon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Weapontake.png">
+      <Link>Content\Images\Weapontake.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\Weaponvanish.png">
+      <Link>Content\Images\Weaponvanish.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\animatedradar.png">
+      <Link>Content\Images\animatedradar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\blackball.png">
+      <Link>Content\Images\blackball.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\blackball2.png">
+      <Link>Content\Images\blackball2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\blackballdeath.png">
+      <Link>Content\Images\blackballdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\blackballdeath2.png">
+      <Link>Content\Images\blackballdeath2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\blacksquare.png">
+      <Link>Content\Images\blacksquare.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\border.png">
+      <Link>Content\Images\border.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\bullet.png">
+      <Link>Content\Images\bullet.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\bullet2.png">
+      <Link>Content\Images\bullet2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\bullet2death.png">
+      <Link>Content\Images\bullet2death.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet0.png">
+      <Link>Content\Images\circlebullet0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet02.png">
+      <Link>Content\Images\circlebullet02.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet0death.png">
+      <Link>Content\Images\circlebullet0death.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet0death2.png">
+      <Link>Content\Images\circlebullet0death2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet1.png">
+      <Link>Content\Images\circlebullet1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebullet12.png">
+      <Link>Content\Images\circlebullet12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebulletdeath.png">
+      <Link>Content\Images\circlebulletdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebulletdeath1.png">
+      <Link>Content\Images\circlebulletdeath1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlebulletdeath12.png">
+      <Link>Content\Images\circlebulletdeath12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlefighter.png">
+      <Link>Content\Images\circlefighter.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlefighterdeath.png">
+      <Link>Content\Images\circlefighterdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlefighterspawn.png">
+      <Link>Content\Images\circlefighterspawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlelazershooter.png">
+      <Link>Content\Images\circlelazershooter.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlelazershooterdeath.png">
+      <Link>Content\Images\circlelazershooterdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlelazershooterspawn.png">
+      <Link>Content\Images\circlelazershooterspawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlesprayer.png">
+      <Link>Content\Images\circlesprayer.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlesprayerdeath.png">
+      <Link>Content\Images\circlesprayerdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\circlesprayerspawn.png">
+      <Link>Content\Images\circlesprayerspawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\enemyradar.png">
+      <Link>Content\Images\enemyradar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\foolscap.png">
+      <Link>Content\Images\foolscap.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\foolscap2.png">
+      <Link>Content\Images\foolscap2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\hpbar2.png">
+      <Link>Content\Images\hpbar2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\hpbar2small.png">
+      <Link>Content\Images\hpbar2small.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\pellet.png">
+      <Link>Content\Images\pellet.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\pellet2.png">
+      <Link>Content\Images\pellet2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\pelletdeath.png">
+      <Link>Content\Images\pelletdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\pelletdeath2.png">
+      <Link>Content\Images\pelletdeath2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\plane.png">
+      <Link>Content\Images\plane.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\plane2.png">
+      <Link>Content\Images\plane2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\planedeath.png">
+      <Link>Content\Images\planedeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\planehpbar.png">
+      <Link>Content\Images\planehpbar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\radarbase.png">
+      <Link>Content\Images\radarbase.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sniperbullet.png">
+      <Link>Content\Images\sniperbullet.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sniperbullet2.png">
+      <Link>Content\Images\sniperbullet2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sniperbulletdeath.png">
+      <Link>Content\Images\sniperbulletdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sniperbulletdeath2.png">
+      <Link>Content\Images\sniperbulletdeath2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquare.png">
+      <Link>Content\Images\snipersquare.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquare2.png">
+      <Link>Content\Images\snipersquare2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquaredeath.png">
+      <Link>Content\Images\snipersquaredeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquaredeath2.png">
+      <Link>Content\Images\snipersquaredeath2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquarespawn.png">
+      <Link>Content\Images\snipersquarespawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\snipersquarespawn2.png">
+      <Link>Content\Images\snipersquarespawn2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sprayerbullet.png">
+      <Link>Content\Images\sprayerbullet.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\sprayerbulletdeath.png">
+      <Link>Content\Images\sprayerbulletdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square0.png">
+      <Link>Content\Images\square0.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square02.png">
+      <Link>Content\Images\square02.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square0death.png">
+      <Link>Content\Images\square0death.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square0death2.png">
+      <Link>Content\Images\square0death2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square0spawn.png">
+      <Link>Content\Images\square0spawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square0spawn2.png">
+      <Link>Content\Images\square0spawn2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square1.png">
+      <Link>Content\Images\square1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square12.png">
+      <Link>Content\Images\square12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square2.png">
+      <Link>Content\Images\square2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square22.png">
+      <Link>Content\Images\square22.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square2death.png">
+      <Link>Content\Images\square2death.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square2death2.png">
+      <Link>Content\Images\square2death2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square2spawn.png">
+      <Link>Content\Images\square2spawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\square2spawn2.png">
+      <Link>Content\Images\square2spawn2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\squaredeath.png">
+      <Link>Content\Images\squaredeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\squaredeath1.png">
+      <Link>Content\Images\squaredeath1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\squaredeath12.png">
+      <Link>Content\Images\squaredeath12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\squaredeath2.png">
+      <Link>Content\Images\squaredeath2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\squaredeath22.png">
+      <Link>Content\Images\squaredeath22.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\star.png">
+      <Link>Content\Images\star.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\testelevator.png">
+      <Link>Content\Images\testelevator.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\testlevel.png">
+      <Link>Content\Images\testlevel.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatform.png">
+      <Link>Content\Images\turretplatform.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformdeath.png">
+      <Link>Content\Images\turretplatformdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformfit.png">
+      <Link>Content\Images\turretplatformfit.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformfitdeath.png">
+      <Link>Content\Images\turretplatformfitdeath.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformfitspawn.png">
+      <Link>Content\Images\turretplatformfitspawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformspawn.png">
+      <Link>Content\Images\turretplatformspawn.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\turretplatformspawntransclucent.png">
+      <Link>Content\Images\turretplatformspawntransclucent.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\weaponbar.png">
+      <Link>Content\Images\weaponbar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\building.png">
+      <Link>Content\Images\building.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\shaft.png">
+      <Link>Content\Images\shaft.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\elevator.png">
+      <Link>Content\Images\elevator.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\floor1.png">
+      <Link>Content\Images\floor1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\floor2.png">
+      <Link>Content\Images\floor2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MyFirstGame.Shared\Content\Images\floor3.png">
+      <Link>Content\Images\floor3.png</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

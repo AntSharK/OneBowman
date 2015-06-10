@@ -1,0 +1,35 @@
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="3/16/2015 5:22:48 AM" StartupItem="MyFirstGame/MyFirstGame.Mac/MyFirstGame.Mac.csproj">
+  <DisabledProjects>
+    <String>MyFirstGame/MyFirstGame.WindowsPhone/MyFirstGame.WindowsPhone.csproj</String>
+    <String>MyFirstGame/MyFirstGame.Windows/MyFirstGame.Windows.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyFirstGame/MyFirstGame.Shared/Sprites/Testing/TestAnimatedSprite.cs">
+    <Files>
+      <File FileName="MyFirstGame/MyFirstGame.Shared/GamePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.iOS/GameMain.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/Game.Initialize.cs" Line="46" Column="4" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/Game.Utility.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Mac/Main.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Screens/BaseScreen.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/Game.Draw.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/GamePage.xaml" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/InputState.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Mac/Info.plist" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Sprites/Testing/TestAnimatedSprite.cs" Line="49" Column="63" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/ContentLoader.cs" Line="29" Column="39" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Sprites/BaseAnimatedSprite.cs" Line="310" Column="48" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Core/CurrentGame.cs" Line="39" Column="36" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Screens/Testing/TestScreen.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Sprites/BaseSprite.cs" Line="1" Column="1" />
+      <File FileName="MyFirstGame/MyFirstGame.Shared/Sprites/Building.cs" Line="15" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/vijay/Dropbox/MyFirstGame/MyFirstGame/MyFirstGame.Shared/Core/ContentLoader.cs" line="29" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>69877259-f148-4cd4-a0eb-a7a235f9490c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MyFirstGame</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\CurrentGame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Game.Draw.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Game.Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Game.Utility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\BaseScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\ScreenDecorators\BaseScreenDecorator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\ScreenDecorators\TestCameraDecorator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\Testing\TestScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\BaseAnimatedSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\BaseSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\MultiLayerSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Testing\TestSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\InputState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ContentLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Camera.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Content\Images\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
