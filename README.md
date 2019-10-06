@@ -1,3 +1,7 @@
+# ARCHIVED
+This project is archived. Shortly after setting this up, I went to use Monogame on a separate project. This project essentially contains nothing but template code.
+---
+
 # MyFirstGame
 Development environment:
 Monogame 3.2
